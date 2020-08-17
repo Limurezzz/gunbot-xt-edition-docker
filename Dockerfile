@@ -2,7 +2,7 @@ FROM ubuntu:latest
 
 RUN apt-get update && apt-get install -y unzip wget && apt-get clean
 
-ARG GUNBOT_VERSION=11b906
+ARG GUNBOT_VERSION=18.8.8
 ENV GUNBOT_VERSION ${GUNBOT_VERSION}
 
 RUN mkdir -p /app
@@ -16,6 +16,6 @@ WORKDIR /app/gunbot
 
 VOLUME /app/gunbot/
 
-CMD ./gunthy-linx64
+CMD ./gunthy-linux
 
 EXPOSE 5000
